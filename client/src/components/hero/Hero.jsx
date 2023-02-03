@@ -1,7 +1,7 @@
 import React from 'react'
 import classes from './hero.module.css'
 import {AiOutlineArrowDown} from 'react-icons/ai'
-import manEating from '../../assets/man-having-his-meal.svg'
+import pizzabg from '../../assets/pizzabg.webp'
 
 const Hero = () => {
   return (
@@ -19,11 +19,11 @@ const Hero = () => {
           </p> */}
           <div className={classes.buttons}>
             <button className={classes.buttonOrder}>Order</button>
-            <button className={classes.buttonSee}><a href="#foods"> Peek in<AiOutlineArrowDown/> </a></button>
+            <button className={classes.buttonSee}><a href="#foods">Peek in<AiOutlineArrowDown/> </a></button>
           </div>
         </div>
         <div className={classes.right}>
-          <img src={manEating} alt="" className={classes.manEatingImg}/>
+          <img src={pizzabg} alt="" className={classes.pizzabgImg}/>
         </div>
       </div>
     </section>

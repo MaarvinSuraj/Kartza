@@ -13,6 +13,9 @@ const Login = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
+  const btn = () => {
+    navigate('/')
+  }
   const handleLogin = async(e) => {
       e.preventDefault()
 
@@ -49,8 +52,8 @@ const Login = () => {
           <form onSubmit={handleLogin} className={classes.loginForm}>
             <input type="email" placeholder='Type email' onChange={(e) => setEmail(e.target.value)}/>
             <input type="password" placeholder='Type password' onChange={(e) => setPassword(e.target.value)}/>
-            <Link className={classes.submitBtn} to='/'>
-            <button >Login</button></Link>
+           
+            <button onClick={btn} className={classes.submitBtn}>Login</button>
             <Link to="/signup"><p className='dont'>Don't have an account? Sign up</p></Link>
           </form>
           {

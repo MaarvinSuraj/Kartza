@@ -9,7 +9,7 @@
     height: 100%;
     width: 85%;
     margin: 0 auto;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     gap: 15rem;
 }
@@ -25,6 +25,7 @@
 .firstMsg{
     margin-bottom: 24px;
     font-size: 32px;
+    color: white;   
 }
 
 .firstMsg > span{
@@ -35,6 +36,7 @@
 
 .secondMsg{
     font-size: 26px;
+    color: white;
 }
 
 .secondMsg > span{
@@ -72,7 +74,7 @@
 
 .buttons>button:hover{
     border: 0.5px solid rgb(0, 234, 199);
-    background-color: #fff;
+    background-color: transparent;
     color: rgb(0, 234, 199);
 }
 
@@ -92,6 +94,8 @@
     flex-direction: column;
     align-items: flex-start;
     margin-top: 2rem;
+    position: relative;
+    z-index: 2;
 }
 
 /* right */
@@ -99,8 +103,16 @@
    flex: 1;
 }
 
-.manEatingImg{
+/* .manEatingImg{
     height: 40%;
     width: 100%;
     object-fit: cover;
+} */
+
+.pizzabgImg{
+    height: 93vh;
+    width: 120%;
+    object-fit: cover;
+    margin-left: -10%;
+    margin-top: -25.2%;
 }
