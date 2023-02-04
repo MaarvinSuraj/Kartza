@@ -18,7 +18,7 @@ const FoodDetails = () => {
 
   useEffect(() => {
      const fetchFoodDetails = async() => {
-      const res = await fetch(`http://localhost:5000/product/find/${id}`, {
+      const res = await fetch(`http://localhost:3001/product/find/${id}`, {
         headers: {
           "Authorization": `Bearer ${token}`
         }
@@ -46,7 +46,7 @@ const FoodDetails = () => {
     <div className={classes.container}>
       <div className={classes.wrapper}>
         <div className={classes.left}>
-          <img src={`http://localhost:5000/images/${foodDetails?.img}`}/>
+          <img src={`http://localhost:3001/images/${foodDetails?.img}`}/>
         </div>
         <div className={classes.right}>
           <h2 className={classes.title}>{foodDetails?.title}</h2>
