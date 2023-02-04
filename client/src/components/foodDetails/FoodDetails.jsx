@@ -51,7 +51,7 @@ const FoodDetails = () => {
         <div className={classes.right}>
           <h2 className={classes.title}>{foodDetails?.title}</h2>
           <div className={classes.price}>
-            Price: <span>$</span> {foodDetails?.price}
+            Price: <span>Rs.</span> {foodDetails?.price}
           </div>
           <div className={classes.quantity}>
             <button disabled={quantity === 1} onClick={() => changeQuantity('dec')}>-</button>
