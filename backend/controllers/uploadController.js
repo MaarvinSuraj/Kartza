@@ -18,7 +18,7 @@ const upload = multer({
 })
 
 // req.body.image
-uploadController.post('/image', upload.single('image'), (req, res) => {
+uploadController.post('/image',verifyToken, upload.single('image'), (req, res) => {
   try {
     return res.status(201).json({msg: "Successfully uploaded file"})
   } catch (error) {

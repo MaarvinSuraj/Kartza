@@ -24,5 +24,5 @@ app.use('/upload', uploadController)
 // start our server
 app.listen(process.env.PORT, () => console.log('Server has been started successfully'))
 
-// server is on port 3001, client is on port 3000,
+// server is on port 3000, client is on port 3000,
 // we are going to get a cors ERROR!!, but cors() removes that's error

@@ -2,6 +2,7 @@ const authController = require('express').Router()
 const User = require('../models/User')
 const bcrypt = require("bcrypt")
 const jwt = require('jsonwebtoken')
+const { verifyToken } = require('../middlewares/verifyToken')
 
 // register
 authController.post('/register', async(req, res) => {
@@ -28,7 +29,7 @@ authController.post('/login', async(req, res) => {
     try {
        const user = await User.findOne({email: req.body.email}) 
        if(!user){
-          throw new Error("User credentials are wrong!")
+        throw new Error("User credentials are wrong!")
        }
 
        // 123456, [lkoiuytfdrse5rd6tfgyhijopk[l;]'\[pkojiugyftdrzsdxtfycghu]]
@@ -42,7 +43,7 @@ authController.post('/login', async(req, res) => {
 
        return res.status(200).json({others, token})
     } catch (error) {
-        return res.status(500).json(error.message) 
+      throw new Error("User credentials are wrong!")
     }
 })
 
