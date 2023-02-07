@@ -9,6 +9,7 @@ import { logout } from '../../redux/authSlice'
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const {products} = useSelector((state) => state.cart)
+  // const admin = useSelector((state)=>state.user.)
   const dispatch = useDispatch()
   const navigate = useNavigate()
 

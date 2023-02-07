@@ -17,7 +17,7 @@ const Signup = () => {
   const handleSignup = async(e) => {
     e.preventDefault()
     try {
-      const res = await fetch(`http://localhost:3001/auth/register`, {
+      const res = await fetch(`http://localhost:5000/auth/register`, {
         headers: {
           "Content-Type": 'application/json'
         },
@@ -51,7 +51,7 @@ const Signup = () => {
             <input type="email" placeholder="Type email" onChange={(e) => setEmail(e.target.value)}/>
             <input type="password" placeholder="Type password"  onChange={(e) => setPassword(e.target.value)}/>
             <button className={classes.submitBtn}>Sign Up</button>
-            <Link to='/login'><p>Already have an account? Login</p></Link>
+            <Link to='/login'><p className='sp' >Already have an account? Login</p></Link>
           </form>
           {
             error && (

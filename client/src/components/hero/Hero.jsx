@@ -5,7 +5,7 @@ import pizzabg from '../../assets/pizzabg.webp'
 
 const Hero = () => {
   return (
-    <section style={{height: '200vh'}} id="home" className={classes.container}>
+    <section style={{height: '100vh'}} id="home" className={classes.container}>
       <div className={classes.wrapper}>
         <div className={classes.left}>
           <h2 className={classes.title}>Hey you!</h2>
@@ -18,7 +18,7 @@ const Hero = () => {
             They are our single most important thing for our business.
           </p> */}
           <div className={classes.buttons}>
-            <button className={classes.buttonOrder}>Order</button>
+            {/* <button className={classes.buttonOrder}>Order</button> */}
             <button className={classes.buttonSee}><a href="#foods">Peek in<AiOutlineArrowDown/> </a></button>
           </div>
         </div>

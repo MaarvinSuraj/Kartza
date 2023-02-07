@@ -20,17 +20,18 @@ const Login = () => {
       e.preventDefault()
 
       try {
-        const res = await fetch(`http://localhost:3001/auth/login`, {
+        const res = await fetch(`http://localhost:5000/auth/login`, {
           headers: {
             'Content-Type': 'application/json'
           },
           method: "POST",
           body: JSON.stringify({email, password})
         })
+        console.log("response",res)
 
         const data = await res.json()
         console.log(data)
-        dispatch(login(data)) // {userInfo, token}
+        dispatch(login(data)) 
         navigate("/")
         
       } catch (error) {
@@ -52,8 +53,8 @@ const Login = () => {
           <form onSubmit={handleLogin} className={classes.loginForm}>
             <input type="email" placeholder='Type email' onChange={(e) => setEmail(e.target.value)}/>
             <input type="password" placeholder='Type password' onChange={(e) => setPassword(e.target.value)}/>
-           
-            <button onClick={btn} className={classes.submitBtn}>Login</button>
+            {/* onClick={btn}  */}
+            <button className={classes.submitBtn}>Login</button>
             <Link to="/signup"><p className='dont'>Don't have an account? Sign up</p></Link>
           </form>
           {
