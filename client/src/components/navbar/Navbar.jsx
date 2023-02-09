@@ -51,7 +51,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className={classes.right}>
-          <AiOutlineUser className={classes.userIcon}/>
+          {/* <AiOutlineUser className={classes.userIcon}/> */}
           <Link to='/cart' className={classes.cartContainer}>
             <AiOutlineShoppingCart className={classes.cartIcon} />
             <div className={classes.cartQuantity}>{products.length}</div>

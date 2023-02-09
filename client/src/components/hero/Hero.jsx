@@ -1,9 +1,45 @@
-import React from 'react'
+import React, { useState , useEffect } from 'react';
 import classes from './hero.module.css'
 import {AiOutlineArrowDown} from 'react-icons/ai'
 import pizzabg from '../../assets/pizzabg.webp'
+import icebg from '../../assets/icebg.jpeg'
+import burgerbg from '../../assets/burgerbg.jpeg'
+import tandooribg from '../../assets/tandooribg.jpg'
+import rollbg from '../../assets/rollbg.jpeg'
+import pastabg from '../../assets/pastabg.jpeg'
+
 
 const Hero = () => {
+
+  const images = [
+    pizzabg,
+    icebg,
+    burgerbg,
+    tandooribg,   
+    rollbg,
+    pastabg
+  ];
+
+  const [selectedImage, setSelectedImage] = useState(images[0]);
+  const [showImage, setShowImage] = useState(false);
+
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      const randomIndex = Math.floor(Math.random() * images.length);
+      setSelectedImage(images[randomIndex]);
+      setShowImage(false);
+
+      setTimeout(() => {
+        setShowImage(true);
+      }, 5000);
+    }, 3000);
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, []);
+
   return (
     <section style={{height: '100vh'}} id="home" className={classes.container}>
       <div className={classes.wrapper}>
@@ -23,7 +59,9 @@ const Hero = () => {
           </div>
         </div>
         <div className={classes.right}>
-          <img src={pizzabg} alt="" className={classes.pizzabgImg}/>
+        <div className={`image-container ${showImage ? 'show' : ''}`}>
+          <img src={selectedImage} alt="" className={classes.pizzabgImg}/>
+        </div>
         </div>
       </div>
     </section>
@@ -31,3 +69,7 @@ const Hero = () => {
 }
 
 export default Hero
+
+
+
+
