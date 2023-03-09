@@ -2,6 +2,7 @@
     height: 100vh;
     width: 100vw;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-image:linear-gradient(to left,rgb(0, 234, 199), rgb(220, 224, 0));
@@ -129,3 +130,113 @@
     right: 5rem;
     font-weight: 500;
 }
+
+@media screen and (min-width: 769px) {
+
+.top{
+  /* color:rgb(0, 234, 199);
+  font-size: 30px;
+  font-weight: bold;
+  background: white;
+  padding: 1.5rem 10rem;
+  margin-bottom: 2rem; */
+  display: none;
+}
+}
+/* Mobile Styles */
+
+@media screen and (max-width: 768px) {
+
+    /* login container */
+    .loginContainer {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow-y: hidden;
+    }
+
+    .top{
+      color:rgb(0, 234, 199);
+      font-size: 30px;
+      font-weight: bold;
+      background: white;
+      padding: 1.5rem 10rem;
+    }
+  
+    /* login wrapper */
+    .loginWrapper {
+      flex-direction: column;
+      height: auto;
+      width: 90%;
+      border-radius: 0;
+    }
+  
+    /* left side */
+    .loginLeftSide {
+      display: none;
+    }
+  
+    /* right side */
+    .loginRightSide {
+      flex: none;
+      margin-top: 6rem;
+      margin-bottom: 10rem;
+      padding: 10%;
+      border-radius:3%;
+      width: 85vw;
+      height: auto;
+    }
+  
+    .loginRightSide > h2 {
+      font-size: 28px;
+    }
+  
+    /* login form */
+    .loginForm {
+      margin-top: 2rem;
+    }
+  
+    .loginForm > input {
+      width: 100%;
+    }
+  
+    .loginForm > .submitBtn {
+      margin-top: 1.5rem;
+      width: 60%;
+    }
+  
+    .loginForm > p {
+      font-size: 14px;
+      margin-top: 1rem;
+    }
+  
+    .loginForm > p > a {
+      font-size: 14px;
+    }
+  
+    /* error message */
+    .errorMessage {
+      width: 200px;
+      height: auto;
+      top: 2rem;
+      right: 2rem;
+      font-size: 14px;
+    }
+  
+  }
+  
+  /* Tablet Styles */
+  
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+  
+    /* login wrapper */
+    .loginWrapper {
+      width: 70%;
+    }
+  
+    /* left side */
+    .loginLeftSide {
+      height: 50vh;
+    }
+  
+  }

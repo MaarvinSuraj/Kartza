@@ -15,7 +15,7 @@ const Footer = () => {
             <li className={classes.workingTime}>08:00 - 20:00</li>
           </ul>
         </div>
-        <div className={classes.col}>
+        <div className={classes.col} >
           <h2 className={classes.title}>Offers</h2>
           <ul className={classes.list}>
             <li>We offer discounts regularly</li>

@@ -58,3 +58,51 @@
 .thirdImg{
     width: 240px;
 }
+
+
+/* Media queries for mobile screens */
+
+@media screen and (max-width: 767px) {
+
+    .container{
+      margin-bottom: 10px;
+      height: auto;
+      width: 100vw;
+    }
+    .titles {
+      margin-top: 3rem;
+    }
+  
+    .deliverySubtitle {
+      font-size: 16px;
+    }
+  
+    .deliveryTitle {
+      font-size: 22px;
+    }
+  
+    .firstImg {
+      width: 100%;
+      max-width: 275px;
+    }
+  
+    .secondImg {
+      width: 100%;
+      max-width: 250px;
+      margin-bottom: -1rem;
+    }
+  
+    .thirdImg {
+      width: 100%;
+      max-width: 240px;
+    }
+  
+    .deliveryInfos {
+      flex-wrap: wrap;
+    }
+  
+    .deliveryInfo {
+      flex-basis: 100%;
+      margin-bottom: 2rem;
+    }
+  }

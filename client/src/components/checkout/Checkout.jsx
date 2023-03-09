@@ -11,7 +11,7 @@ const Checkout = () => {
     <div className={classes.container}>
       <div className={classes.wrapper}>
         <h2>Your order is placed</h2>
-        <p>Expect it within 1 hour</p>
+        <p>You'll be notified when it's ready</p>
         <span>Total Price: Rs.{totalPrice}</span>
       </div>
     </div>

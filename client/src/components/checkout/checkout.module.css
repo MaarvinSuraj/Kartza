@@ -4,30 +4,76 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 .wrapper{
     height: 50vh;
-    width: 50vh;
+    width: 100vh;
     display: flex;
     flex-direction: column;
     gap: 24px;
     align-items: center;
+    justify-content:center;
+    /* margin: 10%; */
+    padding: 10%;
+    border: black;
+    border-style: solid;
+    overflow: none;
 }
 
 .wrapper > h2{
     font-weight: bold;
-    font-size: 36px;
+    font-size: 2.5rem;
     white-space: nowrap;
 }
 
 .wrapper > p{
-    font-size: 28px;
+    font-size: 2rem;
     font-weight: 500;
+    white-space: nowrap;
+
     color: #333;
 }
 
 .wrapper > span{
     font-size: 24px;
     color: #555;
+    white-space: nowrap;
 }
+
+
+@media only screen and (max-width: 768px) {
+    .container{
+        padding:3%;
+    }
+    
+    .wrapper {
+      width: 90%;
+      height: auto;
+      padding: 5%;
+      justify-content:center;
+      /* margin-right: 10%;
+      margin-left: 10%; */
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .wrapper {
+      width: 100%;
+      height: auto;
+      padding: 10%;
+      margin-right: 10%;
+      margin-left: 10%;
+      justify-content:center;
+    }
+    .wrapper > h2{
+      font-size: 2rem;
+    }
+    .wrapper > p{
+      font-size: 1.5rem;
+    }
+    .wrapper > span{
+      font-size: 1.2rem;
+    }
+  }

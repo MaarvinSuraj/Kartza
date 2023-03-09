@@ -44,6 +44,9 @@ const Login = () => {
 
   return (<>
     <div className={classes.loginContainer}>
+    <div className={classes.top}>
+            KartzA
+        </div>
       <div className={classes.loginWrapper}>
         <div className={classes.loginLeftSide}>
           <img src={img} className={classes.leftImg}/>

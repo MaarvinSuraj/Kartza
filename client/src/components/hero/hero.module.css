@@ -101,6 +101,8 @@
 /* right */
 .right{
    flex: 1;
+   
+   position: relative;
 }
 
 /* .manEatingImg{
@@ -148,3 +150,106 @@
           .image-container.show {
             opacity: 1;
           }
+
+
+
+/* Mobile styles */
+@media (max-width: 767px) {
+    .container {
+      margin-top: 3.5rem;
+      margin-bottom: -60vh;
+      padding-right: 0;
+      width: 100vw;
+      height: 30vh;
+      overflow-x: hidden;
+    }
+  
+    .wrapper {
+      height: auto;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 5rem;
+      width: 90%;
+      margin: 0 auto;
+    }
+  
+    .left {
+      align-items: center;
+      margin-top: 0;
+      text-align: center;
+      /* background: rgba(0,0,0,0.2); */
+      /* z-index:1; */
+
+    }
+  
+    .title {
+      font-size: 26px;
+      margin-bottom: 20px;
+      margin-top: 15%;
+    }
+  
+    .firstMsg {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  
+    .firstMsg > span {
+      font-size: 20px;
+    }
+  
+    .secondMsg {
+      font-size: 20px;
+    }
+  
+    .secondMsg > span {
+      font-size: 20px;
+    }
+  
+    .desc {
+      font-size: 16px;
+      margin-top: 30px;
+      max-width: 100%;
+      line-height: 24px;
+    }
+  
+    .buttons {
+      margin-top: 2rem;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+  
+    .buttons > button {
+      padding: 0.75rem 1.5rem;
+      font-size: 16px;
+    }
+    
+  
+    .pizzabgImg {
+      height: 40vh;
+      width: auto;
+      margin-top:-38%;
+      margin-right: 0;
+      /* margin-left: 0;
+      margin-top: 0; */
+      max-height: 50vh;
+      /* z-index:0;
+      position:relative; */
+      position:relative;
+      top: -140px;
+    }
+
+    .image-container{
+      height: 28vh;
+      width: 100vw;
+      margin-top:-25%;
+      margin-right: -10%;
+      /* margin-left: 0;
+      margin-top: 0; */
+      max-height: 50vh;
+      /* z-index:0;
+      position:relative; */
+      position:relative;
+      top: -140px;
+    }
+  }

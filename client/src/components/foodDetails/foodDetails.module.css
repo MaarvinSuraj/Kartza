@@ -114,6 +114,9 @@
     cursor: pointer;
     font-size: 18px;
     text-transform: capitalize;
+    background: none;
+    border: black;
+    border-style: solid;
 }
 
 .category > .categoryName:hover{
@@ -152,3 +155,77 @@
     color: rgb(0, 234, 199);
     background-color: #fff;
 }
+
+
+@media (max-width: 768px) {
+    .container{
+    }
+
+    .wrapper {
+      flex-direction: column;
+      gap: 0px;
+    }
+    .left {
+      width: 100%;
+    }
+    .left > img {
+      height: auto;
+      width: 100%;
+    }
+    .right {
+      width: 100%;
+      align-items: start;
+      margin-top: 0rem;
+      gap: 2px;
+    }
+
+    .title {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    .price {
+      font-size: 24px;
+    }
+    .quantity {
+      flex-direction: row;
+      margin-bottom: 10px;
+    }
+    .quantity > button {
+      font-size: 16px;
+    }
+    .quantity > .quantityNumber {
+      font-size: 20px;
+    }
+
+    .productDesc{
+        margin-top: 2%;
+    }
+
+    .productDesc > div {
+      font-size: 22px;
+      font-weight: 300;
+    }
+    .productDesc > p {
+      font-size: 14px;
+    }
+    .category {
+      margin: 2px 0;
+    }
+    .category > h3 {
+      font-size: 24px;
+      font-weight: 300;
+    }
+    .category > .categoryName {
+      font-size: 16px;
+      padding: 0.3rem 1rem;
+      background: none;
+      border: black;
+      border-style: solid;
+    }
+    .addToCart {
+      font-size: 18px;
+      margin: 1.5rem;
+      gap: 5px;
+      padding: 0.4rem 1rem;
+    }
+  }

@@ -40,6 +40,9 @@ const Signup = () => {
 
   return (
     <div className={classes.signUpContainer}>
+          <div className={classes.top}>
+            KartzA
+        </div>
       <div className={classes.signUpWrapper}>
         <div className={classes.signUpLeftSide}>
           <img src={img} className={classes.leftImg} />

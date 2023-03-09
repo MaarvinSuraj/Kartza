@@ -3,7 +3,9 @@ import classes from './cart.module.css'
 import {useDispatch, useSelector} from 'react-redux'
 import {AiOutlineClose} from 'react-icons/ai'
 import { removeProduct } from '../../redux/cartSlice'
-import {useNavigate} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom';
+import { loadScript, loadModal } from 'razorpay';
+
 
 const Cart = () => {
   const {products} = useSelector((state) => state.cart)
@@ -23,6 +25,7 @@ const Cart = () => {
       navigate('/checkout')
     }
   }
+  
 
   return (
     <div className={classes.container}>
@@ -46,7 +49,9 @@ const Cart = () => {
           <div className={classes.totalProductMsg}>Total products: {products.length}</div>
           <div className={classes.subtotalCheckoutBtns}>
             <span className={classes.subtotal}>Subtotal: Rs.{totalPrice}</span>
-            <span onClick={handleOrder} disabled={products.length === 0} className={classes.orderNowBtn}>Order now</span>
+            {/* <Link to="/localhost:5000"> */}
+            <div onClick={handleOrder} disabled={products.length === 0} className={classes.orderNowBtn}>Order now</div>
+            {/* </Link> */}
           </div>
         </div>
       </div>

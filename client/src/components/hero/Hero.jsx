@@ -44,7 +44,7 @@ const Hero = () => {
     <section style={{height: '100vh'}} id="home" className={classes.container}>
       <div className={classes.wrapper}>
         <div className={classes.left}>
-          <h2 className={classes.title}>Hey you!</h2>
+          <h2 className={classes.title}>HEY YOU!</h2>
           <p className={classes.firstMsg}>You look <span>HUNGRY...</span> aren't you?</p>
           <p className={classes.secondMsg}>
             wanna order something <span>DELICIOUS </span> from us?

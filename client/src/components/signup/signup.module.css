@@ -123,3 +123,115 @@
 .sp{
     margin-bottom: 10px;
 }
+
+
+@media screen and (min-width: 769px) {
+
+    .top{
+      /* color:rgb(0, 234, 199);
+      font-size: 30px;
+      font-weight: bold;
+      background: white;
+      padding: 1.5rem 10rem;
+      margin-bottom: 2rem; */
+      display: none;
+    }
+    }
+    /* Mobile Styles */
+    
+    @media screen and (max-width: 768px) {
+    
+        /* login container */
+        .signUpContainer {
+          display: flex;
+          flex-direction: column;
+          height: 100vh;
+          overflow-y: hidden;
+        }
+    
+        .top{
+          color:rgb(0, 234, 199);
+          font-size: 30px;
+          font-weight: bold;
+          background: white;
+          padding: 1.5rem 10rem;
+          margin-top: 3rem;
+        }
+      
+        /* login wrapper */
+        .signUpWrapper {
+          flex-direction: column;
+          height: auto;
+          width: 90%;
+          border-radius: 0;
+        }
+      
+        /* left side */
+        .signUpLeftSide {
+          display: none;
+        }
+      
+        /* right side */
+        .signUpRightSide {
+          flex: none;
+          margin-top: 6rem;
+          margin-bottom: 10rem;
+          padding: 10%;
+          border-radius:3%;
+          width: 85vw;
+          height: auto;
+        }
+      
+        .signUpRightSide > h2 {
+          font-size: 28px;
+        }
+      
+        /* login form */
+        .signUpForm {
+          margin-top: 2rem;
+        }
+      
+        .signUpForm > input {
+          width: 100%;
+        }
+      
+        .signUpForm > .submitBtn {
+          margin-top: 1.5rem;
+          width: 60%;
+        }
+      
+        .signUpForm > p {
+          font-size: 14px;
+          margin-top: 1rem;
+        }
+      
+        .signUpForm > p > a {
+          font-size: 14px;
+        }
+      
+        /* error message */
+        .errorMessage {
+          width: 200px;
+          height: auto;
+          top: 2rem;
+          right: 2rem;
+          font-size: 14px;
+        }
+      
+      }
+      
+      /* Tablet Styles */
+      
+      @media screen and (min-width: 768px) and (max-width: 1024px) {
+      
+        /* login wrapper */
+        .signUpWrapper {
+          width: 70%;
+        }
+      
+        /* left side */
+        .signUpLeftSide {
+          height: 50vh;
+        }
+      
+      }
